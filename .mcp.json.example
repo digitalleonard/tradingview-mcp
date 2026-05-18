@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "tradingview": {
+      "command": "node",
+      "args": ["/FULL/PATH/TO/tradingview-mcp/src/server.js"]
+    }
+  }
+}
+
+// ──────────────────────────────────────────────────────────
+// INSTRUCTIONS
+// ──────────────────────────────────────────────────────────
+// 1. Copy this file to: ~/.claude/.mcp.json
+//    (Remove this comment block — JSON doesn't support comments)
+//
+// 2. Replace /FULL/PATH/TO/tradingview-mcp with the actual
+//    absolute path where you cloned the MCP server repo.
+//
+// macOS / Linux examples:
+//   /Users/yourname/tradingview-mcp/src/server.js
+//   /home/yourname/tradingview-mcp/src/server.js
+//
+// Windows examples (use double backslashes):
+//   C:\\Users\\YourName\\tradingview-mcp\\src\\server.js
+//   C:/Users/YourName/tradingview-mcp/src/server.js
+//
+// 3. If you already have other MCP servers configured,
+//    add the tradingview entry alongside them:
+//
+// {
+//   "mcpServers": {
+//     "your-existing-server": {
+//       "command": "...",
+//       "args": ["..."]
+//     },
+//     "tradingview": {
+//       "command": "node",
+//       "args": ["/path/to/tradingview-mcp/src/server.js"]
+//     }
+//   }
+// }
