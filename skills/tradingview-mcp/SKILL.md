@@ -15,15 +15,23 @@ Full programmatic control of TradingView Desktop via Claude Code. 78 tools cover
 
 ## Setup & Installation
 
-### 1. Install the MCP Server
+### 1. Get the Setup Guide & Skill
 
 ```bash
-git clone https://github.com/yoebet/tradingview-mcp.git
+git clone https://github.com/digitalleonard/tradingview-mcp.git
+```
+
+This repo contains the Claude skill, launch scripts, full tool reference, and setup guide for all platforms.
+
+### 2. Install the MCP Server
+
+```bash
+git clone https://github.com/tradesdontlie/tradingview-mcp.git
 cd tradingview-mcp
 npm install
 ```
 
-### 2. Register the MCP in Claude Code
+### 3. Register the MCP in Claude Code
 
 Add to `~/.claude/.mcp.json`:
 
@@ -32,8 +40,7 @@ Add to `~/.claude/.mcp.json`:
   "mcpServers": {
     "tradingview": {
       "command": "node",
-      "args": ["/path/to/tradingview-mcp/src/index.js"],
-      "env": {}
+      "args": ["/path/to/tradingview-mcp/src/server.js"]
     }
   }
 }
@@ -58,7 +65,14 @@ chmod +x ~/launch-tradingview.sh
 "C:\Users\YourName\AppData\Local\Programs\TradingView\TradingView.exe" --remote-debugging-port=9222
 ```
 
-### 4. Workflow Every Session
+### 4. Install the Claude Skill
+
+```bash
+mkdir -p ~/.claude/skills/tradingview-mcp
+cp digitalleonard-tradingview-mcp/skills/tradingview-mcp/SKILL.md ~/.claude/skills/tradingview-mcp/SKILL.md
+```
+
+### 5. Workflow Every Session
 
 ```
 1. Run ~/launch-tradingview.sh
